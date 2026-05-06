@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl
+           bg-brand-600 text-white font-medium text-sm
+           hover:bg-brand-700 active:bg-brand-800
+           dark:bg-brand-500 dark:hover:bg-brand-400 dark:active:bg-brand-600
+           transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl
+           bg-brand-50 text-brand-700 font-medium text-sm border border-brand-200
+           hover:bg-brand-100 active:bg-brand-200
+           dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700
+           dark:hover:bg-gray-700
+           transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl
+           text-brand-600 font-medium text-sm
+           hover:bg-brand-50
+           dark:text-brand-400 dark:hover:bg-gray-800
+           transition-colors duration-150;
+  }
+  .card {
+    @apply bg-white dark:bg-gray-900 rounded-2xl border border-brand-100
+           dark:border-gray-800 shadow-sm;
+  }
+  .section-heading {
+    @apply text-3xl font-bold text-brand-900 dark:text-white text-center;
+  }
+  .section-sub {
+    @apply text-brand-500 dark:text-gray-400 text-center text-lg mt-3 max-w-2xl mx-auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb { @apply bg-brand-200 dark:bg-gray-700 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-brand-300 dark:bg-gray-600; }
