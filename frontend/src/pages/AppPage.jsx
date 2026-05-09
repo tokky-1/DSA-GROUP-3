@@ -7,7 +7,7 @@ import ResultsSection from '../components/ResultsSection'
 import { useConversion } from '../hooks/useConversion'
 
 const DEFAULT_SETTINGS = {
-  docStructure: 'multi-page',
+  docStructure: 'multi',
   outputFormat: 'doc',
 }
 
