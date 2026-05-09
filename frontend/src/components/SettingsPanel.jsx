@@ -2,12 +2,12 @@ import { FileText, Files, FileIcon } from 'lucide-react'
 
 const DOC_STRUCTURES = [
   {
-    value: 'multi-page',
+    value: 'multi',
     label: 'Multiple Pages',
     sub: 'All images combined into a single document',
   },
   {
-    value: 'single-docs',
+    value: 'single',
     label: 'Separate Documents',
     sub: 'Each image becomes its own document',
   },

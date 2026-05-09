@@ -58,9 +58,11 @@ export default function ResultsSection({ files, onReset }) {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-brand-800 dark:text-white truncate">{file.name}</p>
-              <p className="text-xs text-brand-400 dark:text-gray-500 mt-0.5">
-                {formatBytes(file.blob.size)}
-              </p>
+              {file.blob && (
+                <p className="text-xs text-brand-400 dark:text-gray-500 mt-0.5">
+                  {formatBytes(file.blob.size)}
+                </p>
+              )}
               <div className="flex gap-2 mt-2.5">
                 <button
                   onClick={() => preview(file)}
